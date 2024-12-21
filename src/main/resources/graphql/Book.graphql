@@ -1,0 +1,15 @@
+type BookDTO {
+
+titre:String
+publisher:String
+datePublication:String
+price:Float
+resume:String
+}
+
+type Query{
+    getBookByTitre(title:String):[BookDTO]
+}
+type Mutation{
+    getBookByTitle(book:BookRequest):BookDTO
+}
